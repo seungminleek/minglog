@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+
+{%for post in posts11 %}
+<div class="post">
+    <h2><a href="/post/{{post.id}}/">{{post.title}}</a></h2>
+    <!--<h2><a href="{% url 'de' pk=post.pk %}">{{post.title}}</a></h2>-->
+    <p class="date">Date: {{post.created}}</p>
+</div>
+{%endfor%}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+    <div class="post">
+        <div class="date">
+        {{post.created}}
+        </div>
+        <h1>{{post.title}} - {{post.author}}</h1>
+        <p>{{ post.content|linebreaksbr}}</p>
+    </div>
+{% endblock %}
+
